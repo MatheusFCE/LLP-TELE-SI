@@ -1,20 +1,20 @@
 // Cria um programa que recebe dados via teclado e grava em um arquivo.
 #include <stdio.h>
 #include <stdlib.h>
-#define TAMANHO 500
+#define SIZE 500
 int main()
 {
-char texto[TAMANHO];
-  ARQUIVO* fp;
+char texto[SIZE];
+  FILE* fp;
 
   printf("Escreva o que quer salvar no arquivo.\n");
-  fgets(texto, TAMANHO, stdin);
+  fgets(texto, SIZE, stdin);
   if((fp = fopen("arquivo.txt", "w"))==NULL)
   {
 printf ("Não foi possível abrir o arquivo.\n");
-    saída(1);
+    exit(1);
     }
   fputs (texto, fp);
   fclose(fp);
-  retorna 0;    
+  return 0;    
   }
