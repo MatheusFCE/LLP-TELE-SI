@@ -1,4 +1,4 @@
-// Cria um programa que recebe dados via teclado e grava em um arquivo.
+//Cria um programa que receba dados via teclado e grave em um arquivo
 #include <stdio.h>
 #include <stdlib.h>
 #define SIZE 500
