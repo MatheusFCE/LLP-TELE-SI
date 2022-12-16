@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define SIZE 500
+int main()
+{
+char texto[SIZE];
+  FILE* fp;
+
+  printf("Escreva o que quer salvar no arquivo.\n");
+  fgets(texto, SIZE, stdin);
+  if((fp = fopen("arquivo.txt", "w"))==NULL)
+  {
+printf ("Não foi possível abrir o arquivo.\n");
+    exit(1);
+    }
+  fputs (texto, fp);
+  fclose(fp);
+  return 0;    
+  }
